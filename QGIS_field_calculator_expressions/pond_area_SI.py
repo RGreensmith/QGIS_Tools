@@ -21,6 +21,13 @@ def get_SI(coord1,coord2,pond_area):
 
 @qgsfunction(args='auto', group='Custom', referenced_columns=['pond_area'])
 def pond_area_SI(feature, parent):
+    """
+    Calculates the pond area GCN HSI score
+    <h2>Example usage:</h2>
+    <ul>
+      <li>pond_area_SI()</li>
+    </ul>
+    """
     pond_area = feature.attribute('pond_area')
     
     if (pond_area < 500):
@@ -29,11 +36,11 @@ def pond_area_SI(feature, parent):
         return get_SI(coord1,coord2,pond_area)
     
     if (pond_area <700):
-        return feature.attribute(1)
+        return 1
         
     if (pond_area < 2000):
         coord1 = {'x':700,'y':1}
         coord2 = {'x':2000,'y':0.8}
         return get_SI(coord1,coord2,pond_area)
         
-    return feature.attribute(-9999)
+    return -9999
