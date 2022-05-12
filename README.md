@@ -1,2 +1,2 @@
-# BioC
-Repository for Biodiverse Consulting
+# QGIS_Tools
+Repository for QGIS tools
