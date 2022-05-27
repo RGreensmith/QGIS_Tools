@@ -22,7 +22,7 @@ def get_SI(coord1,coord2,pond_area):
 @qgsfunction(args='auto', group='Custom', referenced_columns=['pond_area'])
 def pond_area_SI(feature, parent):
     """
-    Calculates the pond area GCN HSI score
+    Calculates the pond area GCN HSI score using straight line equation: y = mx + c
     <h2>Example usage:</h2>
     <ul>
       <li>pond_area_SI()</li>

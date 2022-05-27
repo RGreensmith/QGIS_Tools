@@ -1,7 +1,7 @@
 import cv2
 # image_paths=['south.jpg','central.jpg']
-# image_paths=['southErasedCropped.jpg','centralErasedCropped.jpg']
-image_paths=['koala1.jpg','koala4.jpg','koala3.jpg']
+image_paths=['southErasedCropped.jpg','centralErasedCropped.jpg']
+# image_paths=['koala1.jpg','koala4.jpg','koala3.jpg']
 
 # initialized a list of images
 imgs = []
@@ -32,4 +32,5 @@ else:
     # final output
     # cv2.imshow('final_result',output)
     # cv2.waitKey(0)
-    cv2.imwrite('./test_images/final_result.jpg',output)
+    # cv2.imwrite('./test_images/final_result.jpg',output)
+    cv2.imwrite('./test_images/stitched_south_central.jpg',output)
